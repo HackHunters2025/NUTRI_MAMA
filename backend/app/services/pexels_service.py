@@ -19,7 +19,7 @@ import os
 
 # ⚠️ WARNING: Hardcoding API keys like this is INSECURE for shared or production code.
 # Use environment variables or a secure secret manager instead.
-PEXELS_API_KEY = "YOUR_KEY"  # Replace this with your key
+PEXELS_API_KEY = ""  # Replace this with your key
 
 BASE_URL = "https://api.pexels.com/v1/search"
 

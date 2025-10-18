@@ -4,7 +4,7 @@ from typing import Dict, Any, List
 
 # 🔑 WARNING: This key is hardcoded and exposed. Replace this placeholder 
 # with your actual Spoonacular API Key if you use this code.
-SPOONACULAR_API_KEY = "YOUR_HARDCODE" 
+SPOONACULAR_API_KEY = "" 
 
 # The endpoint for searching recipes
 BASE_URL = "https://api.spoonacular.com/recipes/complexSearch"
@@ -16,7 +16,7 @@ def get_recipes(query: str, number: int = 5):
     :param number: Number of results to return (default=5)
     """
     # Check if the placeholder was accidentally left empty
-    if not SPOONACULAR_API_KEY or SPOONACULAR_API_KEY == "c8c6c670f5124c27a0dbb84380b2e58f":
+    if not SPOONACULAR_API_KEY or SPOONACULAR_API_KEY == "":
         return {"error": "API Key is missing or default placeholder key is used.", "status_code": 500}
 
     params = {

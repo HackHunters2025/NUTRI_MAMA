@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- ✅ Basic Setup -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NutriMama — Pregnancy & Wellness Companion</title>
+
+    <!-- ✅ Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ✅ Basic theme color -->
+    <meta name="theme-color" content="#F6F8FB" />
+
+    <!-- ✅ SEO Improvements -->
+    <meta
+      name="description"
+      content="NutriMama is your smart pregnancy and wellness companion — empowering mothers-to-be with nutrition guidance, personalized health tips, and emotional support throughout every stage of motherhood."
+    />
+    <meta
+      name="keywords"
+      content="Pregnancy, Nutrition, Wellness, Motherhood, Baby Health, Diet Tracking, Women Health, NutriMama"
+    />
+    <meta name="author" content="NutriMama Development Team" />
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+
+    <!-- ✨ Enhanced Styling -->
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(145deg, #fff9fb, #f7fbff);
+        background-attachment: fixed;
+        background-size: cover;
+        font-family: "Poppins", sans-serif;
+        color: #333;
+        overflow-x: hidden;
+        min-height: 100vh;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .floating-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at 20% 30%, rgba(255, 192, 203, 0.25), transparent 60%),
+          radial-gradient(circle at 80% 70%, rgba(173, 216, 230, 0.25), transparent 60%);
+        animation: float 10s ease-in-out infinite alternate;
+        z-index: -1;
+      }
+
+      @keyframes float {
+        from {
+          transform: translateY(0px);
+        }
+        to {
+          transform: translateY(-25px);
+        }
+      }
+
+      .preloader {
+        position: fixed;
+        inset: 0;
+        background: linear-gradient(145deg, #fff6f9, #f9fcff);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        transition: opacity 0.6s ease, visibility 0.6s ease;
+      }
+
+      .preloader.hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .loader-ring {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 6px solid #f8d7da;
+        border-top-color: #ec4899;
+        border-right-color: #f472b6;
+        animation: spin 1.2s linear infinite;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .preloader h1 {
+        margin-top: 20px;
+        font-weight: 700;
+        font-size: 1.8rem;
+        color: #e91e63;
+        letter-spacing: 0.6px;
+      }
+
+      .preloader p {
+        max-width: 320px;
+        font-size: 0.95rem;
+        color: #555;
+        text-align: center;
+        margin-top: 10px;
+        line-height: 1.5;
+      }
+
+      .intro-text {
+        position: absolute;
+        bottom: 35px;
+        text-align: center;
+        width: 100%;
+        color: #888;
+        font-size: 0.9rem;
+        letter-spacing: 0.3px;
+      }
+
+      .intro-text span {
+        color: #ec4899;
+        font-weight: 600;
+      }
+
+      #root {
+        opacity: 0;
+        animation: fadeIn 1.2s ease-in-out 0.3s forwards;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* 🌸 Hero Section */
+      .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 100px 20px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .hero h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #ec4899;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+        color: #666;
+        line-height: 1.7;
+        margin-bottom: 30px;
+      }
+
+      .hero .btn {
+        background: #9333ea;
+        color: white;
+        padding: 12px 30px;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        box-shadow: 0 4px 14px rgba(147, 51, 234, 0.3);
+        transition: background 0.3s ease;
+      }
+
+      .hero .btn:hover {
+        background: #7e22ce;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 font-poppins">
+    <!-- 🌸 Background -->
+    <div class="floating-bg"></div>
+
+    <!-- 🌿 Preloader -->
+    <div class="preloader" id="preloader">
+      <div class="loader-ring"></div>
+      <h1>Welcome to NutriMama</h1>
+      <p>
+        Your personal guide to a healthy and happy motherhood journey —
+        nurturing both you and your baby with care, balance, and science-backed nutrition.
+      </p>
+      <div class="intro-text">
+        Made with 💕 by the <span>NutriMama Team</span>
+      </div>
+    </div>
+
+    <!-- 🌼 App Mount -->
+    <div id="root">
+      <!-- ✨ Hero Section -->
+      <section class="hero">
+        <h1>Empowering Your Motherhood Journey</h1>
+        <p>
+          NutriMama supports you with expert nutrition advice, wellness guidance,
+          and emotional support every step of the way. Feel confident, cared for,
+          and connected as you nurture new life.
+        </p>
+        <button class="btn">Get Started</button>
+      </section>
+    </div>
+
+    <!-- ⚡ Vite/React -->
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- 🌸 Preloader Script -->
+    <script>
+      window.addEventListener("load", () => {
+        const preloader = document.getElementById("preloader");
+        setTimeout(() => {
+          preloader.classList.add("hidden");
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
