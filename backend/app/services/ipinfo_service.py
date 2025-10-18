@@ -1,7 +1,7 @@
 import requests
 
 # 🔑 Put your API key directly here
-IPINFO_TOKEN = "YOUR_KEY"
+IPINFO_TOKEN = ""
 
 BASE_URL = "https://ipinfo.io/"
 

@@ -6,7 +6,7 @@ from google import genai
 from google.genai.errors import APIError
 
 # 🔑 WARNING: API Key is hardcoded as requested.
-GEMINI_API_KEY = "YOUR_GEMINI_API_KEY_HERE" 
+GEMINI_API_KEY = "" 
 
 # --- KNOWLEDGE BASE SNIPPETS ---
 ICMR_GUIDANCE = """

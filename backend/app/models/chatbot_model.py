@@ -6,7 +6,7 @@ from google.genai.errors import APIError
 
 # WARNING: Hardcoding the API key is INSECURE for production code.
 # Assuming this key is defined in your actual file:
-GEMINI_API_KEY = "YOUR_GEMINI_API_KEY" 
+GEMINI_API_KEY = "" 
 
 class ChatbotModel:
     def __init__(self, model_name="gemini-2.5-flash"):

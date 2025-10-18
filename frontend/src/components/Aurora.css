@@ -1,0 +1,7 @@
+.aurora-container {
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+  pointer-events: none;
+  opacity: 0.8;
+}
