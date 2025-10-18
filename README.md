@@ -76,7 +76,7 @@ NUTRI_MAMA/
 
 1️⃣ Clone the Repository
 ``` 
-git clone https://github.com/kritika-2005/NUTRI_MAMA.git
+git clone https://github.com/HackHunters2025/NUTRI_MAMA.git
 cd NUTRI_MAMA
 ```
 
